@@ -14,4 +14,10 @@ describe('Module Pattern', function(){
   it('should have a public property', function(){
     assert.isString(module.publicProperty);
   });
+  it('should have a private property', function(){
+    assert.isUndefined(module._privateProperty);
+  });
+  it('should have a public method that can return private and public properties', function(){
+    assert.strictEqual(module.publicMethod(), 'foo bar');
+  });
 });
