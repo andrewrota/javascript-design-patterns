@@ -39,4 +39,12 @@ describe('Constructor Pattern', function(){
     assert.isString(constructor.greeting);
     assert.isString(constructor.name);
   });
+  it('should be able to create multiple instances of constructor', function(){
+    var englishConstructor = new Constructor('Hello', 'World');
+    var spanishConstructor = new Constructor('Hola', 'Mundo');
+    assert.strictEqual(englishConstructor.greeting, 'Hello');
+    assert.strictEqual(englishConstructor.name, 'World');
+    assert.strictEqual(spanishConstructor.greeting, 'Hola');
+    assert.strictEqual(spanishConstructor.name, 'Mundo');
+  });
 });
