@@ -33,4 +33,10 @@ describe('Constructor Pattern', function(){
     var constructor = new Constructor();
     assert.isObject(constructor);
   });
+  it('should be able to be pass parameters to constructor', function(){
+    var constructor = new Constructor('Hello', 'World');
+    assert.isObject(constructor);
+    assert.isString(constructor.greeting);
+    assert.isString(constructor.name);
+  });
 });

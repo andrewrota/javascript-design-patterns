@@ -4,6 +4,7 @@
  * @class Constructor
  */
 
-module.exports = function() {
-
+module.exports = function(greeting, name) {
+  this.greeting = greeting;
+  this.name = name;
 };
