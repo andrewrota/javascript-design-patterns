@@ -33,6 +33,14 @@ describe('Constructor Pattern', function(){
     var constructor = new Constructor();
     assert.isObject(constructor);
   });
+  it('should have an instance method', function(){
+    var constructor = new Constructor('Hello', 'World');
+    assert.isFunction(constructor.instanceMethod);
+  });
+  it('should have an instance method that returns a string', function(){
+    var constructor = new Constructor('Hello', 'World');
+    assert.strictEqual(constructor.instanceMethod(), 'Hello, World');
+  });
   it('should be able to be pass parameters to constructor', function(){
     var constructor = new Constructor('Hello', 'World');
     assert.isObject(constructor);

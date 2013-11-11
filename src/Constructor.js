@@ -19,4 +19,14 @@ module.exports = function(greeting, name) {
    * @type {String}
    */
   this.name = name;
+  /**
+   * An instance method that concatenates
+   * name and greeting
+   *
+   * @method instanceMethod
+   * @return {String}
+   */
+  this.instanceMethod = function() {
+    return this.greeting + ', ' + this.name;
+  };
 };
