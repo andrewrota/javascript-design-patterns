@@ -57,6 +57,8 @@ describe('Constructor Pattern', function(){
     assert.strictEqual(englishConstructor.name, 'World');
     assert.strictEqual(spanishConstructor.greeting, 'Hola');
     assert.strictEqual(spanishConstructor.name, 'Mundo');
+    assert.strictEqual(englishConstructor.instanceMethod(), 'Hello, World');
+    assert.strictEqual(spanishConstructor.instanceMethod(), 'Hola, Mundo');
   });
 });
 describe('Constructor Pattern using Prototypes', function(){
@@ -93,5 +95,7 @@ describe('Constructor Pattern using Prototypes', function(){
     assert.strictEqual(englishConstructor.name, 'World');
     assert.strictEqual(spanishConstructor.greeting, 'Hola');
     assert.strictEqual(spanishConstructor.name, 'Mundo');
+    assert.strictEqual(englishConstructor.instanceMethod(), 'Hello, World');
+    assert.strictEqual(spanishConstructor.instanceMethod(), 'Hola, Mundo');
   });
 });
