@@ -60,6 +60,10 @@ describe('Constructor Pattern', function(){
     assert.strictEqual(englishConstructor.instanceMethod(), 'Hello, World');
     assert.strictEqual(spanishConstructor.instanceMethod(), 'Hola, Mundo');
   });
+  it('should have instanceMethod property on the instance object', function() {
+    var constructor = new Constructor('Hello', 'World');
+    assert.ok(constructor.hasOwnProperty('instanceMethod'));
+  });
 });
 describe('Constructor Pattern using Prototypes', function(){
   it('should be defined', function(){
@@ -97,5 +101,9 @@ describe('Constructor Pattern using Prototypes', function(){
     assert.strictEqual(spanishConstructor.name, 'Mundo');
     assert.strictEqual(englishConstructor.instanceMethod(), 'Hello, World');
     assert.strictEqual(spanishConstructor.instanceMethod(), 'Hola, Mundo');
+  });
+  it('should not have instanceMethod property on the instance object', function() {
+    var constructor = new ConstructorProto('Hello', 'World');
+    assert.notOk(constructor.hasOwnProperty('instanceMethod'));
   });
 });
