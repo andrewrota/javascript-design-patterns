@@ -9,10 +9,9 @@
 module.exports = (function() {
   /**
    * Reference to the singleton
-   * to check if it exists
    *
    * @property _instance
-   * @type {Boolean}
+   * @type {Object}
    * @private
    */
   var _instance;
@@ -31,7 +30,10 @@ module.exports = (function() {
 
   return {
     getInstance: function() {
-      return init();
+      if(!_instance) {
+        _instance = init();
+      }
+      return _instance;
     }
   };
 }());
