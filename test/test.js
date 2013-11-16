@@ -3,6 +3,7 @@ var assert = chai.assert;
 var module = require('../src/module');
 var Constructor = require('../src/Constructor');
 var ConstructorProto = require('../src/ConstructorProto');
+var singleton = require('../src/singleton');
 describe('Module Pattern', function(){
   it('should be defined', function(){
     assert.isDefined(module);
@@ -105,5 +106,19 @@ describe('Constructor Pattern using Prototypes', function(){
   it('should not have instanceMethod property on the instance object', function() {
     var constructor = new ConstructorProto('Hello', 'World');
     assert.notOk(constructor.hasOwnProperty('instanceMethod'));
+  });
+});
+describe('Singleton Pattern', function(){
+  it('should be defined', function(){
+    assert.isDefined(singleton);
+  });
+  it('should be an object', function(){
+    assert.isObject(singleton);
+  });
+  it('should have a getInstance method', function(){
+    assert.isFunction(singleton.getInstance);
+  });
+  it('should return the same random number twice', function() {
+    assert.strictEqual(singleton.getInstance().randomNumber, singleton.getInstance().randomNumber);
   });
 });
