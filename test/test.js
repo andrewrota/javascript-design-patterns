@@ -4,6 +4,7 @@ var module = require('../src/module');
 var Constructor = require('../src/Constructor');
 var ConstructorProto = require('../src/ConstructorProto');
 var singleton = require('../src/singleton');
+var prototypeObject = require('../src/prototypeObject');
 describe('Module Pattern', function(){
   it('should be defined', function(){
     assert.isDefined(module);
@@ -120,5 +121,13 @@ describe('Singleton Pattern', function(){
   });
   it('should return the same random number twice', function() {
     assert.strictEqual(singleton.getInstance().randomNumber, singleton.getInstance().randomNumber);
+  });
+});
+describe('Prototype Pattern', function(){
+  it('should be defined', function(){
+    assert.isDefined(prototypeObject);
+  });
+  it('should be an object', function(){
+    assert.isObject(prototypeObject);
   });
 });
