@@ -6,6 +6,14 @@
  */
 
 module.exports = (function() {
+  /**
+     * The constructor
+     *
+     * @method ConstructorProto
+     * @param {String} greeting Greeting text
+     * @param {String} name Name text
+     * @constructor
+     */
   var ConstructorProto = function(greeting, name) {
     /**
      * The greeting property
