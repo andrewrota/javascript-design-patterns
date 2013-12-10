@@ -1,6 +1,7 @@
 JavaScript Design Patterns
 ==========================
 
+
 A repository to keep examples of programming design patterns written in JavaScript.
 
 ## Resources
