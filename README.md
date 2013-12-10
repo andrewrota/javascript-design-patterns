@@ -1,6 +1,7 @@
 JavaScript Design Patterns
 ==========================
 
+[![Build Status](https://travis-ci.org/andrewrota/javascript-design-patterns.png?branch=master)](https://travis-ci.org/andrewrota/javascript-design-patterns)
 
 A repository to keep examples of programming design patterns written in JavaScript.
 
